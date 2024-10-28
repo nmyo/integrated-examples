@@ -34,7 +34,7 @@
 
 8、使用本人 Releases 中编译好的 Caddy 文件，可同时支持 SNI 分流及定向 UDP 转发、NaiveProxy 及 PROXY protocol 等应用。
 
-9、本示例 NaiveProxy 除了支持 HTTPS 代理应用，还同时支持 HTTP/3 代理应用，即 QUIC 协议传输。若 NaiveProxy 使用 HTTP/3 代理应用，建议[增加 UDP 接收缓冲区大小](https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes)。
+9、本示例 NaiveProxy 除了支持 HTTPS 协议连接，还同时支持 QUIC 协议连接，即支持 HTTP/3 正向代理应用。Caddy 启用 HTTP/3 支持，建议[增加服务端系统的 UDP 缓冲区大小](https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes)。
 
 10、本示例所需 TLS 证书由 Caddy（内置 ACME 客户端） 提供，实现 TLS 证书自动申请及更新。
 
