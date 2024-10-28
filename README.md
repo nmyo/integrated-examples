@@ -4,7 +4,7 @@
 3. 实现了 V2Ray/Xray 与 Caddy 的应用使用 UDS（Unix Domain Socket） 连接时采用 abstract 模式，不需考虑 UDS 路径及监听进程的访问权限。
 4. 实现了 Xray 与 Nginx 的应用使用 UDS（Unix Domain Socket） 连接时（回落/分流连接除外）采用附加访问权限形式，简单高效地解决了监听进程的访问权限。
 5. 实现了 JSON 配置 Caddy SNI 分流及定向 UDP 转发，且可针对不同分流端口或进程灵活决定是否开启 PROXY protocol 发送。
-6. 实现了 Caddy 所有 NaiveProxy 除了支持 HTTPS 代理应用，还同时支持 HTTP/3 代理应用，即 QUIC 协议传输。
+6. 实现了 Caddy 的 NaiveProxy 除了支持 HTTPS 协议连接，还同时支持 QUIC 协议连接，即支持 HTTP/3 正向代理应用。
 7. 实现了由 Caddy 提供 TLS 证书的应用，其证书申请、更新及重载更新证书都可全自动化。
 8. 实现了正常应用与 CDN 流量中转（基于 WebSocket/HTTPUpgrade/gRPC/SplitHTTP over TLS） 应用可同时使用，且使用 CDN 进行流量中转也能获取到客户端真实 IP。
 9. 实现了服务端综合应用配置示例中所有非 RAW（更名前的 TCP） 传输方式的应用可删、可换、可增，灵活修改而不影响整体使用。
